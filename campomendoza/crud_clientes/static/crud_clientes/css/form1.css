@@ -1,0 +1,103 @@
+/* estilo solo para el formularios de luciano */
+form {
+    display:flex;
+    flex: 1 1 auto;
+    flex-direction:column;
+    gap:0.5rem;
+    justify-content:center;
+    width:100%;
+}
+.input-style, .inline-buttons {
+    width:100%;
+    padding:0 1rem;
+    border-radius:2rem;
+    height:3em;
+    background-color:transparent;
+    outline:1px solid bisque;
+    font-family:'DM Sans', sans-serif;
+    font-size: 1em;
+}
+select {
+    field-sizing: content;
+}
+select option {
+    background-color:black;
+}
+input[type="file"] {
+    display:none;
+}
+.file-label {
+    width:100%;
+    color:black;
+    background-color:goldenrod;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    text-align:center;
+    outline:0;
+    padding:0.8rem;
+}
+select:focus,
+select:hover,
+input:focus,
+input:hover {
+    border:0;
+    outline:2px solid bisque;
+}
+select,
+input[type="button"],
+input[type="file"],
+input[type="submit"] {
+    cursor:pointer;
+}
+input[type="button"],
+input[type="submit"]:hover {
+    background-color:goldenrod;
+    color:black;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    padding:0.5rem;
+    background-color:bisque;
+    border-radius:1rem;
+    cursor:pointer;
+}
+.subcription label,
+.subcription input {
+    display:inline-block;
+}
+#form-mensaje, .subtitle {
+    text-align:center;
+    padding:1rem;
+    color:bisque;
+    font-family:'DM Sans';
+}
+label {
+    font-family:'DM Sans', sans-serif;
+    color:bisque;
+}
+
+.inline-buttons {
+    display:flex;
+    padding:0;
+    margin-top:2rem;
+}
+.inline-buttons > input {
+    width:100%;
+    height:100%;
+    background:transparent;
+    outline:0;
+    color:bisque;
+
+}
+.inline-buttons > input:first-child {
+    border-right:1px solid bisque;
+    border-radius: 2rem 0 0 2rem;
+}
+.inline-buttons > input:last-child {
+    border-radius: 0 2rem 2rem 0;
+}
+.inline-buttons > input:hover {
+    background-color:goldenrod;
+    color:black;
+    padding:0;
+}

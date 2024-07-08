@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'crud_clientes/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'crud_clientes/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'crud_clientes/css/styles.css' %}">
+
+    <!-- Carga Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <main class="d-flex flex-column a-items-center">
+      <div>
+        <h4 class="crud title m-b-2">
+          Sistema de Registro de Visitantes de Campo Mendoza
+        </h4>
+      </div>
+
+      <div>
+        <table class="table">
+            <thead>
+              <tr class="table-header">
+                <th>DNI foto</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Cant. personas</th>
+                <th>Email</th>
+                <th>Subcripcion</th>
+                <th>Plan</th>
+                <th></th>
+                <th></th>
+              </tr>
+          </thead>
+          </tbody>
+              {% for obj in objects %}
+              <tr class="table-row">
+                <td><img src="{{ obj.photo.url }}" class="table-image" alt="Foto del DNI"/></td>
+                <td>{{ obj.fullname }}</td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.cant_personas }}</td>
+                <td>{{ obj.email_input }}</td>
+                <td>{{ obj.news_espanol }}</td>
+                <td>{{ obj.plan_title }}</td>
+                <td>
+                  <a href="{% url 'delete' pk=obj.pk %}" data-method="delete" onclick="confirmar('{{ obj.fullname }}')">
+                    <img class="action-button" src="{% static 'crud_clientes/img/fi-rr-cross-circle.svg' %}" alt="Eliminar registro">
+                  </a>
+                </td>
+                <td>
+                  <a href="{% url 'update' pk=obj.pk %}" target="_blank">
+                    <img class="action-button" src="{% static 'crud_clientes/img/fi-rr-edit.svg' %}" alt="Editar registro">
+                  </a>
+                </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="{% static 'crud_clientes/js/all.js' %}"></script>
+</body>
+</html>

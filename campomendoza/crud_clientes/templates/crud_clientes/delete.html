@@ -1,0 +1,9 @@
+<!-- TODO: esto es solo una tabla provisoria -->
+<form action="{{ request.path }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+    {{ form }}
+    
+    <a href="{% url 'all' %}">[Volver]</a>
+    <input type="submit" value="Borrar Visita">
+</form>
+{{ form.errors }}

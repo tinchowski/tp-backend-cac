@@ -1,0 +1,10 @@
+/* css para la pagina update.html */
+
+main {
+    display:flex;
+    margin-top:100px;
+    justify-content:center;
+    align-items:center;
+    
+}
+

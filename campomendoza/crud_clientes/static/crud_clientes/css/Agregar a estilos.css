@@ -1,0 +1,107 @@
+.header.tabla {
+  align-items: stretch;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid bisque;
+}
+
+.header.tabla > div {
+  width: 11.11%;
+}
+
+.header.tabla h6 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 1rem;
+    color: bisque;
+}
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: center;
+}
+.icon.icon_edit {
+  background-image: url("img/fi-rr-pencil.svg");
+}
+.icon.icon_delete {
+  background-image: url("img/fi-rr-cross-circle.svg");
+}
+.row.content {
+  align-items: stretch;
+  padding: 1rem 0rem 1rem 0rem;
+  border-bottom: 1px solid bisque;
+}
+.row.content > div {
+  /*flex: 1 1 calc(11.11% - 1rem);*/
+  width: 11.11%;
+  
+}
+.row.content > div > img {
+  width: 100%;
+}
+.row.content > div > .header.content {
+  margin: 0;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1rem;
+  color: bisque;
+  display: none;
+}
+.row.content > div > .content {
+  margin: 0;
+  font-family: 'DM Sans';
+  font-weight: 200;
+  font-size: 1rem;
+  color: bisque;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row.content > div > button {
+  font-size: 1rem;
+  color: bisque;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid bisque;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.row.content > div > button:hover {
+  background-color: goldenrod;
+}
+
+@media all and (max-width: 900px) {
+  .row.content > div > button > .text {
+    display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /*Ocultar header de tabla*/
+  .header.tabla {
+    display: none;
+  }
+  .row.content {
+    flex-direction: column;
+  }
+  .row.content > div {
+    /* flex: 1 1 calc(11.11% - 1rem); */
+    width: 100%;
+  }
+  .row.content > div > .header.content {
+    display: block;
+  }
+  .row.content > div > button {
+    width: 100%;
+    justify-content: center;
+  }
+  .row.content > div > button > .text {
+    display: block;
+  }
+}

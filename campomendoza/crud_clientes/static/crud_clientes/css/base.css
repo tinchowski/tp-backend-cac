@@ -1,0 +1,181 @@
+/* estilo minimo solo para base.html (y sus herederos) */
+/* y sin formulario  */
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    border:0;
+    color:bisque;
+    font-family:sans-serif;
+}
+body {
+    background-color:rgb(29,29,29);
+}
+
+h4 {font-family: 'DM Sans';
+    font-size: 2em;}
+     
+
+.row {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    gap:2rem;
+}
+.column {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2rem;
+}
+a {
+    color:goldenrod;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover {
+    color:white;
+}
+a:visited {
+    color:bisque;
+}
+.navbar {
+    position:fixed;
+    width:100%;
+    top:0;
+    background-color:rgba(0,0,0,0.8);
+    z-index:99;
+}
+nav.row a {
+    text-decoration:none;
+    font-size:small;
+}
+.navbar .row {
+    padding:0.5rem;
+    vertical-align:middle;
+}
+.navbar .row .fa {
+    font-size:large;
+}
+.laestancia {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:78px;
+}
+.laestancia img {
+    width:100%;
+}
+.laestancia h1 {
+    position:absolute;
+    color:white;
+    font-family: "Freehand", cursive;
+    font-size:5em;
+    font-weight:300;
+    font-style:normal;
+}
+.description {
+    width:100%;
+    margin:auto 0;
+}
+.description p, footer {
+    font-family:'DM Sans',sans-serif;
+    font-size:1.2rem;
+    font-weight:200;
+    color:bisque;
+    margin-block-end:1rem;
+}
+.section {
+    margin: 2rem 1rem 0 1rem;
+}
+.title h2 {
+    font-family:'Playfair Display', cursive;
+    font-size:2.5em;
+    text-align:center;
+    color:bisque;
+    letter-spacing:0.10em;
+    line-height:5em;
+}
+.title h2::before, .title h2::after {
+    display:inline-block;
+    content: url('../img/uvita.svg');
+    width:1.5em;
+    height:1.5em;
+    position:relative;
+    bottom:-0.5em;
+}
+.subtitle {
+    text-align:center;
+    color:bisque;
+    font-weight:200;
+}
+.frame {
+    background-color:rgba(255,255,255,0.06);
+    padding:2rem;
+    border-radius:2rem;
+    width: clamp(300px,70vw,900px);
+    align-items:unset;
+}
+footer {
+    text-align:center;
+    margin:2rem 0;
+}
+footer p {
+    color:white;
+    padding:0.5rem 0;
+    font-size:1rem;
+    padding:1rem;
+    color:white;
+    font-family:'DM Sans';
+    font-weight:200;
+    letter-spacing:0.5px;
+}
+@media (max-width:1000px) {
+    .section .row {
+        flex-flow:column wrap
+    }
+    .laestancia h1{
+        font-size:3rem;
+    }
+    #form-mensaje, .subtitle {
+        font-size:1.5rem;
+    }
+}
+@media (max-width:700px){
+    .section {
+        margin-top:1rem;
+    }
+    form {
+        width:100%;
+    }
+    .row .frame {
+        width:100%;
+    }
+    .title h2 {
+        font-size:2rem;
+    }
+
+}
+@media (max-width:500px){
+    .navbar {
+        position:static;
+    }
+    .laestancia {
+        margin-top:unset;
+    }
+    .laestancia h1{
+        font-size:2.2rem;
+    }
+    .navbar .row {
+        gap:0.8rem;
+        flex-wrap:wrap;
+    }
+    .frame {
+        padding:1rem;
+        width:100%;
+    }
+    .title h2 {
+        font-size:1.5rem;
+    }
+}

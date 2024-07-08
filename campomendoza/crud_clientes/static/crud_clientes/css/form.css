@@ -1,0 +1,143 @@
+body {
+  background-color: rgb(29, 29, 29);
+}
+
+main {
+  padding: 2rem;
+}
+/* div*/
+.form_contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  margin-left: 12em;
+}
+
+.form_contacto > form {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1em;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  color: bisque;
+  font-family: "DM Sans";
+  text-align: left;
+  justify-content: center;
+}
+
+.smol {
+  display: grid;
+  row-gap: 1em;
+}
+
+.smol img {
+  justify-self: center;
+}
+
+#Boton {
+  color: bisque;
+}
+#Boton:hover {
+  color: black;
+}
+
+input,
+select {
+  display: block;
+  font-size: 1em;
+  color: bisque;
+  font-family: "DM Sans", sans-serif;
+  justify-content: center;
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  outline: 1px solid bisque;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+  border: none;
+  outline: 2px solid bisque;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: bisque;
+  background-color: bisque;
+}
+input[type="file"] {
+  display: none;
+}
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: black;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+input[type="number"],
+input[type="email"],
+select {
+  height: 2.5em !important;
+}
+
+.uploadkit-invalid .uploadkit-button {
+  background-color: #3333cc !important;
+}
+
+.file-label:hover {
+  background-color: rgb(238, 211, 60);
+}
+
+select option {
+  background-color: black;
+}
+
+a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: small;
+}
+
+/* creo animaciones */
+input[type="submit"]:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+/* estilos links */
+a:link {
+  color: goldenrod;
+}
+a:visited {
+  color: bisque;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+.form_contacto {
+  background-color: rgba(255,255,255,0.06);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}

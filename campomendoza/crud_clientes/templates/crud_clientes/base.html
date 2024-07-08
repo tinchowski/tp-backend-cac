@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'crud_clientes/img/favicon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'crud_clientes/css/base.css' %}">
+    {% block styles %}{% endblock %}
+    <title>Campo Mendoza</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="row">
+            <a href="#quienes_somos">QUIENES SOMOS</a>
+            <a href="#bodegas">NUESTRA BODEGA</a>
+            <a href="#gastro">GASTRONOMIA</a>
+            <a href="#contacto">VISITAS</a>
+        </nav>
+        <nav class="row">
+            <a href="https://www.facebook.com/bodegacampomendoza" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/campomendozaok" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.x.com/campomendozaok" class="fa fa-twitter" target="_blank"></a>
+        </nav>
+    </div>
+
+    {% block content %}
+        Esto deberia ser sustituido por el contenido
+    {% endblock %}
+
+    <footer class="footer">
+        <p>Bodegas Campo Mendoza. Provincia de Mendoza, Región de Cuyo, República Argentina.</p>
+        <p>Todos los derechos reservados. 2024.</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* Hice este estilo es por que juntaban los titulos de la tabla */
+.table {
+        font-family:'DM Sans',sans-serif;
+        border-collapse:collapse;
+}
+.table-header {
+    color:bisque;
+}
+.table-row {
+    color:white;
+}
+.table-image {
+    width:100px;
+    height:100px;
+    object-fit:cover;
+}
+.table th, .table td {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    text-align:center;
+    font-size:1rem;
+}
+.table thead tr th {
+    border-bottom:1px solid bisque;
+}
+.table tbody tr {
+    border-bottom:1px solid #353535;
+}
+main {
+    margin-top:7rem;
+}
+.action-button {
+    width:2rem;
+    height:2rem;
+}
+
+
+main {background-color: rgb(54 54 54 / 70%);
+    border: 0px;
+    border-radius: 2em;
+    margin-right: 10em;
+    margin-left: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em}

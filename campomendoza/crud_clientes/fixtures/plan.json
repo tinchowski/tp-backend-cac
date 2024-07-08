@@ -1,0 +1,33 @@
+[
+    {
+        "model":"crud_clientes.plan",
+        "pk":1,
+        "fields":{
+            "nombre":"Recorrida"
+        }
+    },{
+        "model":"crud_clientes.plan",
+        "pk":2,
+        "fields":{
+            "nombre":"Recorrida y almuerzo"
+        }
+    },{
+        "model":"crud_clientes.plan",
+        "pk":3,
+        "fields":{
+            "nombre":"Solo almuerzo"
+        }
+    },{
+        "model":"crud_clientes.plan",
+        "pk":4,
+        "fields":{
+            "nombre":"Recorrida y cena"
+        }
+    },{
+        "model":"crud_clientes.plan",
+        "pk":5,
+        "fields":{
+            "nombre":"Solo cena"
+        }
+    }
+]

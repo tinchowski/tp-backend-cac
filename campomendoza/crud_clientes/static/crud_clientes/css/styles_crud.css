@@ -1,0 +1,168 @@
+/* static/crud_clientes/css/main.css */
+
+/* Importa la hoja de estilos adicional */
+@import url("styles.css");
+
+body{background-color: rgb(29,29,29);}
+
+a{color: white;}
+
+a:hover {
+  color:bisque;
+}
+
+main.d-flex.flex-column {
+  border: 0;
+  border-radius: 2em;
+  background-color: rgba(255,255,255,0.06);
+  padding-top: 0;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+h4.crud.title {
+  color: goldenrod;
+  font-size: 2em;
+  font-family: 'DM Sans';
+}
+
+tr.header.tabla.d-flex.flex-row.gap-3-2.m-s-2 {
+  color: bisque;
+  font-family: 'DM Sans';
+}
+
+tr.row.content.d-flex.flex-row.gap-1.w-100.m-0 {
+  font-family: 'DM Sans';
+  color: white;
+  background-color: rgba(255,255,255,0.05);
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border: 0px;
+  border-radius: .7em;
+  padding-right: .5em;
+  padding-left: 2em;
+  gap: 1.2em;
+}
+
+tr.row.content.d-flex.flex-row.gap-1.w-100.m-0 {
+
+}
+
+tr.row.content.d-flex.flex-row.gap-1.w-100.m-0 {
+  background-color: rgba(255,255,255,0.05);
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border: 0px;
+  border-radius: .7em;
+}
+
+
+.header.tabla {
+  align-items: stretch;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid bisque;
+}
+
+.header.tabla > div {
+  width: 11.11%;
+}
+
+.header.tabla h6 {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: bisque;
+}
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: center;
+}
+.icon.icon_edit {
+  background-image: url("static\crud_clientes\img\crud_img\fi-rr-pencil.svg");
+}
+.icon.icon_delete {
+  background-image: url("static\crud_clientes\img\crud_img\fi-rr-cross-circle.svg");
+}
+.row.content {
+  align-items: stretch;
+  padding: 1rem 0rem 1rem 0rem;
+  border-bottom: 1px solid bisque;
+}
+
+.row.content > div {
+  /*flex: 1 1 calc(11.11% - 1rem);*/
+  width: 11.11%;
+}
+.row.content > div > img {
+  width: 100%;
+}
+.row.content > div > .header.content {
+  margin: 0;
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: bisque;
+  display: none;
+}
+.row.content > div > .content {
+  margin: 0;
+  font-family: "DM Sans";
+  font-weight: 200;
+  font-size: 1rem;
+  color: bisque;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row.content > div > button {
+  font-size: 1rem;
+  color: bisque;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid bisque;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.row.content > div > button:hover {
+  background-color: goldenrod;
+}
+
+@media all and (max-width: 900px) {
+  .row.content > div > button > .text {
+    display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /*Ocultar header de tabla*/
+  .header.tabla {
+    display: none;
+  }
+  .row.content {
+    flex-direction: column;
+  }
+  .row.content > div {
+    /* flex: 1 1 calc(11.11% - 1rem); */
+    width: 100%;
+  }
+  .row.content > div > .header.content {
+    display: block;
+  }
+  .row.content > div > button {
+    width: 100%;
+    justify-content: center;
+  }
+  .row.content > div > button > .text {
+    display: block;
+  }
+}
